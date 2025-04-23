@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import IntroWithLogin from './components/IntroWithLogin';
 import LoginForm from './components/LoginForm';
 import Landing from './pages/Landing';
 import HaircareProducts from './pages/HaircareProducts';
@@ -23,7 +24,7 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={isLoggedIn ? <Landing /> : <LoginForm onLogin={handleLogin} />}
+            element={isLoggedIn ? <Landing /> : <IntroWithLogin onLogin={handleLogin} />}
           />
           <Route path="/landing" element={<Landing />} />
           {/* Add more routes as needed */}

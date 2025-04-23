@@ -1,33 +1,32 @@
+// src/components/LoginForm.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';  // Import Link
+import { Link } from 'react-router-dom';
 import './LoginForm.css';
 
 const LoginForm = ({ onLogin }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-  const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState('');
+  const [successMessage, setSuccessMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setErrorMessage("");
-    setSuccessMessage("");
+    setErrorMessage('');
+    setSuccessMessage('');
 
     try {
       if (!email || !password) {
-        setErrorMessage("Please enter both email and password.");
+        setErrorMessage('Please enter both email and password.');
         setLoading(false);
         return;
       }
 
-      // Simulate API login call or use your `onLogin` function
       await onLogin(email, password);
-
-      setSuccessMessage("Login successful!");
+      setSuccessMessage('Login successful!');
     } catch (err) {
-      setErrorMessage("Login failed. Please try again.");
+      setErrorMessage('Login failed. Please try again.');
     } finally {
       setLoading(false);
     }
@@ -51,13 +50,13 @@ const LoginForm = ({ onLogin }) => {
           onChange={(e) => setPassword(e.target.value)}
           required
         />
-        <button type="submit" disabled={loading}>Login</button>
+        <button type="submit" disabled={loading}>
+          {loading ? 'Logging in...' : 'Login'}
+        </button>
 
-        {loading && <p>Loading...</p>}
         {errorMessage && <p className="error">{errorMessage}</p>}
         {successMessage && <p className="success">{successMessage}</p>}
 
-        {/* Using Link for navigation */}
         <Link to="/forgot-password" className="forget-password">Forgot Password?</Link>
         <Link to="/sign-up" className="signup-link">Don't have an account? Sign up</Link>
       </form>
