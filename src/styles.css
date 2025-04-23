@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e0f7fa, #f1f8e9);
+  }
+  
+  .container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  h1, h2 {
+    color: #2e7d32;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .list-item {
+    margin: 0.75rem 0;
+    font-size: 1rem;
+  }
+  
+  .login-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120deg, #a5d6a7, #81d4fa);
+  }
+  
+  .login-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 300px;
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    color: #388e3c;
+    margin-bottom: 1.5rem;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+  }
+  
+  .login-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #2e7d32;
+  }
+    .error-message {
+        color: red;
+        font-size: 0.875rem;
+        margin-top: -0.5rem;
+        margin-bottom: 1rem;
+    }
+  
+  .success-message {
+    color: green;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .error-message {
+    color: red;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .loading-spinner {
+    display: block;
+    margin: 1rem auto;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .image-upload-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 2rem;
+  }
+
+  .preview-img {
+    max-width: 300px;
+    margin: 1rem auto;
+    border-radius: 10px;
+    display: block;
+  }
+
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #2e7d32;
+  }
+
+  .prediction-result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #2e7d32;
+  }
+
+  .prediction-result.error {
+    color: red;
+  }
+
+  .prediction-result.success {
+    color: green;
+  }
+
+  .prediction-result.loading {
+    color: blue;
+  }
+  .prediction-result.hidden {
+    display: none;
+  }
+ 

@@ -1,0 +1,36 @@
+.image-upload-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  .preview-img {
+    max-width: 300px;
+    margin: 1rem auto;
+    border-radius: 10px;
+    display: block;
+  }
+  
+  button {
+    padding: 0.75rem 1.5rem;
+    background-color: #388e3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2e7d32;
+  }
+  
+  .prediction-result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    color: #2e7d32;
+  }
+  

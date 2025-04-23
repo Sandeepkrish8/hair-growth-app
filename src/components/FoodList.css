@@ -1,0 +1,13 @@
+.food-list h2 {
+    color: #2e7d32;
+  }
+  
+  .food-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .food-list li {
+    margin: 0.75rem 0;
+  }
+  
